@@ -16,8 +16,6 @@ const { fetchMyIP, fetchCoordsByIP, fetchISSFlyOverTimes, nextISSTimesForMyLocat
 //   console.log('It worked! Returned coordinates:', coords);
 // });
 
-// let latLong = { latitude: '49.27670', longitude: '-123.13000' };
-
 // fetchISSFlyOverTimes(latLong, (error, flyovers) => {
 //   if (error) {
 //     console.log("It didn't work!", error);

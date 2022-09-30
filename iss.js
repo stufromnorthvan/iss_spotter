@@ -28,13 +28,13 @@ const fetchCoordsByIP = function(ip, callback) {
       return;
     }
     const coords = JSON.parse(body);
-    // const {latitude, longitude} = coords          <=== another way to do this
-    // const latLong = { latitude, longitude }
     if (!coords.success) {
       (error = `Error! Server says: ${coords.message} for IP Address: ${ip}. Please try again.`);
       callback(error, null);
       return;
     }
+    // const {latitude, longitude} = coords          <=== another way to do this
+    // const latLong = { latitude, longitude }
     const latLong = { latitude: coords.latitude, longitude: coords.longitude };
     callback(null, latLong);
   });
